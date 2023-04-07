@@ -42,8 +42,9 @@ namespace Calculator
                 textLabel.Text = "";
             else if(str == "<=")
             {
-               textLabel.Text.Remove(str.Length- 1);
+                textLabel.Text = textLabel.Text.Remove(textLabel.Text.Length - 1);
             }
+            
             else if(str == "=")
             {
                 string value = new DataTable().Compute(textLabel.Text, null).ToString();
